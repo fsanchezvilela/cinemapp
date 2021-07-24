@@ -1,0 +1,75 @@
+@use 'sass:math';
+@import 'variables';
+
+$base-font-size: 16;
+
+@function px2rem($value: 16) {
+  @return math.div($value, $base-font-size) * 1rem;
+}
+
+@mixin mobile() {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+// EXTENDABLES: Reusable styles that are frequently put together
+%flex-center--horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+%flex-center {
+  @extend %flex-center--horizontal;
+  align-items: center;
+}
+
+%text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// Resets default button styles
+%reset-button {
+  border: none;
+  background: none;
+  font-family: inherit;
+  padding: inherit;
+  text-align: left;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+%mobile-hidden {
+  @include mobile {
+    display: none;
+  }
+}
+
+%sm-hidden {
+  @include breakpoint('sm') {
+    display: none !important;
+  }
+}
+
+%escape-main-layout-mobile {
+  @include mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+  }
+}

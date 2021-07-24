@@ -1,20 +1,109 @@
 {
-  "name": "next-typescript-example",
-  "version": "0.1.0",
-  "private": true,
+  "name": "cineapp",
+  "version": "2021.1.0",
+  "description": "CINEAPP/FRONT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "files": [
+    ".next"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "NEXT_PUBLIC_WEBAPP_VERSION=$npm_package_version next dev",
+    "build": "NEXT_PUBLIC_WEBAPP_VERSION=$npm_package_version next build",
     "start": "next start",
-    "lint": "next lint"
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook",
+    "test": "jest",
+    "test:coverage": "yarn test --coverage",
+    "lint:stage": "eslint --ext .js,.jsx,.ts,.tsx --fix",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src/",
+    "lint:fix": "yarn lint --fix",
+    "test:ci": "yarn test --coverage",
+    "clean": "rm -fr node_modules coverage .next",
+    "ci": "yarn clean && yarn"
   },
   "dependencies": {
-    "next": "11.0.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "@storybook/react": "^6.1.11",
+    "classnames": "^2.2.6",
+    "formik": "^2.2.6",
+    "jest-next-dynamic": "^1.0.1",
+    "lodash.debounce": "^4.0.8",
+    "lodash.isequal": "^4.5.0",
+    "lodash.sortby": "^4.7.0",
+    "next": "^10.0.5",
+    "react": "^17.0.1",
+    "react-click-away-listener": "^1.4.4",
+    "react-dom": "^17.0.1",
+    "react-range": "^1.8.7",
+    "react-select": "^3.1.1",
+    "react-transition-group": "^4.4.1",
+    "react-virtualized": "^9.22.3",
+    "sharp": "^0.27.0",
+    "yup": "^0.32.8"
   },
   "devDependencies": {
-    "eslint": "7.31.0",
-    "eslint-config-next": "11.0.1"
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-decorators": "^7.12.12",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@storybook/addon-actions": "^6.1.11",
+    "@storybook/addon-essentials": "^6.1.11",
+    "@storybook/addon-links": "^6.1.11",
+    "@testing-library/jest-dom": "^5.11.8",
+    "@testing-library/react": "^11.2.3",
+    "@types/classnames": "^2.2.11",
+    "@types/jest": "^26.0.20",
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/lodash.sortby": "^4.7.6",
+    "@types/node": "^14.14.20",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.3",
+    "@types/react-loader-spinner": "^4.0.0",
+    "@types/react-virtualized": "^9.21.11",
+    "@types/relay-runtime": "^10.1.7",
+    "@types/yup": "^0.29.11",
+    "@typescript-eslint/eslint-plugin": "^4.12.0",
+    "@typescript-eslint/parser": "^4.12.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-inline-react-svg": "^1.1.2",
+    "babel-plugin-transform-typescript-metadata": "^0.3.1",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "husky": "^4.3.7",
+    "jest": "^26.6.3",
+    "jest-chain": "^1.1.5",
+    "jest-extended": "^0.11.5",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.2",
+    "sass-loader": "^10.1.1",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.3.5",
+    "webpack-merge": "^5.7.3"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn test"
+    }
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "yarn lint:stage"
+    ]
   }
 }

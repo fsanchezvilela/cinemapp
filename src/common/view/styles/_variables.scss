@@ -1,0 +1,48 @@
+// Colors
+$primary-blue-1: #1f81cd;
+$primary-blue-2: #16b3ef;
+$primary-blue-link: #4cabf0;
+$primary-light-blue-1: #d3ecff;
+$primary-light-blue-2: #ecf7ff;
+$primary-dark-blue: #222a41;
+$primary-dark-blue-2: #004880;
+$primary-yellow-accent: #f5a315;
+$primary-dark-yellow-accent: #d28500;
+$primary-accent-light: #ffe9c3;
+
+$white: #ffffff;
+$black: #000000;
+
+$neutral-dark-gray: #363636;
+$neutral-dark-overlay: rgba($black, 0.8);
+$neutral-dark-loader: rgba($black, 0.6);
+$neutral-medium-gray: #858585;
+$neutral-light-gray-1: #f0f0f0;
+$neutral-light-gray-2: #eaeaea;
+$neutral-light-gray-3: #e1e1e1;
+$neutral-light-gray-4: #cacaca;
+
+$shadow-buttons: 0 px2rem(2) px2rem(6) 0 rgba(0, 0, 0, 0.2);
+$shadow-menus: 0 px2rem(4) px2rem(16) 0 rgba(0, 0, 0, 0.2);
+$shadow-inputs: 0 px2rem(4) px2rem(8) 0 rgba(136, 136, 136, 0.1045);
+$shadow-box-cards: 0 px2rem(2) px2rem(8) rgba(0, 0, 0, 0.15);
+
+$gradient-blue: linear-gradient(90deg, #1f81cd 0%, #35a7ff 100%);
+$gradient-yellow-accent: linear-gradient(90deg, #f5a315 0%, #ffc257 100%);
+$gradient-rating: linear-gradient(
+  90deg,
+  #ff5a5a 0%,
+  #ffd027 51.04%,
+  #2ef78a 100%
+);
+
+$status-error: #e34949;
+$status-success: #48bf65;
+$status-warning: #ffc440;
+$status-information: #5bb2f5;
+
+$breakpoints: (
+  'sm': 767px,
+  'md': 992px,
+  'lg': 1200px,
+) !default;

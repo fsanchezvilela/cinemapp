@@ -1,0 +1,336 @@
+@import 'src/common/view/styles/partials';
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out;
+  border: px2rem(1) solid transparent;
+  border-radius: px2rem(5);
+  box-sizing: border-box;
+
+  &[href] {
+    text-decoration: none;
+  }
+
+  &:hover {
+    border-width: px2rem(1);
+  }
+
+  &:disabled {
+    filter: grayscale(1);
+    background: $neutral-light-gray-4;
+    border-color: $neutral-light-gray-4;
+    color: $neutral-medium-gray;
+    cursor: not-allowed;
+    box-shadow: none;
+    border-width: px2rem(1);
+
+    &:hover {
+      border-width: px2rem(1);
+    }
+  }
+
+  &:active {
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.195968) !important;
+  }
+
+  &__figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--left {
+      margin-right: px2rem(5);
+    }
+
+    &--right {
+      margin-left: px2rem(5);
+    }
+
+    svg {
+      height: px2rem(24);
+      width: px2rem(24);
+    }
+  }
+}
+
+.primary {
+  background: $gradient-blue;
+  box-shadow: $shadow-buttons;
+  color: $white;
+  border: none;
+
+  &.fill-svg {
+    figure {
+      svg {
+        fill: $white;
+      }
+    }
+  }
+
+  &.fill-path {
+    figure {
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($primary-light-blue-1, 1);
+  }
+
+  &:hover {
+    border-color: $primary-light-blue-1;
+  }
+
+  &-solid {
+    @extend .primary;
+    background: $primary-blue-1;
+  }
+}
+
+// This is "SECONDARY BUTTON 1" in Design Guide
+.secondary {
+  background: $primary-light-blue-2;
+  color: $primary-blue-1;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($primary-light-blue-1, 1);
+  }
+  &.fill-path {
+    figure {
+      svg {
+        * {
+          fill: $primary-blue-1;
+        }
+      }
+    }
+  }
+
+  &.fill-svg {
+    figure {
+      svg {
+        fill: $primary-blue-1;
+      }
+    }
+  }
+
+  &:hover {
+    border-color: $primary-light-blue-1;
+  }
+
+  // This is "SECONDARY BUTTON 2" in Design Guide
+  &-alternative {
+    background: $white;
+    color: $primary-blue-1;
+    border-color: $neutral-light-gray-1;
+
+    &.fill-svg {
+      figure {
+        svg {
+          fill: $primary-blue-1;
+        }
+      }
+    }
+
+    &.fill-path {
+      figure {
+        svg {
+          path {
+            fill: $primary-blue-1;
+          }
+        }
+      }
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba($neutral-light-gray-1, 1);
+    }
+
+    &:hover {
+      border-color: $neutral-light-gray-2;
+    }
+  }
+}
+
+.ghost {
+  background: $white;
+  color: $neutral-dark-gray;
+  border-color: $neutral-light-gray-1;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($neutral-light-gray-1, 1);
+  }
+
+  &:hover {
+    border-color: $neutral-light-gray-2;
+  }
+
+  figure {
+    svg {
+      * {
+        fill: $neutral-dark-gray;
+      }
+    }
+  }
+}
+
+.transparent {
+  background: rgba(#fff, 0);
+  color: $neutral-dark-gray;
+  border: none;
+
+  &-light {
+    @extend .transparent;
+    color: $white;
+
+    figure {
+      svg {
+        * {
+          fill: $white !important;
+        }
+      }
+    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($neutral-light-gray-1, 1);
+  }
+
+  &:hover {
+    border-color: $neutral-light-gray-2;
+  }
+
+  figure {
+    svg {
+      * {
+        fill: $neutral-dark-gray;
+      }
+    }
+  }
+}
+
+.accent {
+  background: $gradient-yellow-accent;
+  box-shadow: $shadow-buttons;
+  border: none;
+  color: $white;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($primary-accent-light, 1);
+  }
+
+  figure {
+    svg {
+      * {
+        fill: $white;
+      }
+    }
+  }
+}
+
+.danger {
+  background: $status-error;
+  box-shadow: $shadow-buttons;
+  border-color: #ffcece;
+  color: $white;
+
+  figure {
+    svg {
+      * {
+        fill: $white;
+      }
+    }
+  }
+}
+
+.subtle {
+  background: transparent;
+  color: $primary-blue-1;
+  padding-bottom: px2rem(0);
+  border-radius: px2rem(0);
+  text-decoration: none;
+  box-shadow: none;
+
+  &:active {
+    box-shadow: none !important;
+  }
+
+  &:hover {
+    border-bottom: 1px solid $neutral-light-gray-4;
+  }
+
+  &.fill-svg {
+    figure {
+      svg {
+        fill: $primary-blue-1;
+      }
+    }
+  }
+
+  &.fill-path {
+    figure {
+      svg {
+        path {
+          fill: $primary-blue-1;
+        }
+      }
+    }
+  }
+}
+
+// Button Size
+.s {
+  padding: px2rem(8) px2rem(12);
+  font-size: px2rem(14);
+  line-height: px2rem(16);
+  height: px2rem(32);
+  width: auto;
+
+  figure {
+    svg {
+      height: px2rem(16);
+      width: px2rem(16);
+    }
+  }
+}
+
+.m {
+  padding: px2rem(12) px2rem(16);
+  font-size: px2rem(15);
+  line-height: px2rem(16);
+  height: px2rem(40);
+  width: auto;
+
+  figure {
+    svg {
+      height: px2rem(20);
+      width: px2rem(20);
+    }
+  }
+}
+
+.l {
+  padding: px2rem(12) px2rem(24);
+  font-size: px2rem(16);
+  line-height: px2rem(24);
+  height: px2rem(48);
+  width: auto;
+
+  @include mobile {
+    padding: px2rem(12) px2rem(20);
+  }
+}

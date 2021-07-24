@@ -1,0 +1,53 @@
+@import 'reset';
+@import 'fonts';
+@import 'partials';
+
+// Globals
+* {
+  font-family: 'Inter';
+}
+
+h2 {
+  @extend %h2;
+}
+
+h3 {
+  @extend %h3;
+}
+
+h4 {
+  @extend %h4;
+}
+
+h5 {
+  @extend %h5;
+}
+
+h6 {
+  @extend %h6;
+}
+
+p {
+  @extend %p;
+}
+
+small {
+  @extend %small;
+}
+
+// TODO need IE11 fallback with maybe text-overflow: ellipsis
+.truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  &--one {
+    @extend .truncate;
+    -webkit-line-clamp: 1;
+  }
+
+  &--two {
+    @extend .truncate;
+    -webkit-line-clamp: 2;
+  }
+}
