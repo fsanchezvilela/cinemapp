@@ -5,6 +5,7 @@ import Button from '../src/common/view/components/button/Button';
 import MoviesContainer from '../src/movies/view/containers/MoviesContainer';
 import { store as MoviesStore } from '../src/movies/view/state/store';
 import { Provider } from 'react-redux';
+import MainHeader from '../src/common/view/containers/main-header/MainHeader';
 
 const Home = () => {
   return (
@@ -25,6 +26,7 @@ const Home = () => {
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
       </Head>
+      <MainHeader />
       <Provider store={MoviesStore}>
         <MoviesContainer />
       </Provider>

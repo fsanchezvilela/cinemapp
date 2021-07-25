@@ -3,13 +3,14 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 
 export interface IMaterialContainer {
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  maxWidth?: false | 'md' | 'lg' | 'xs' | 'sm' | 'xl';
 }
 
-const MaterialContainer = ({ children }: IMaterialContainer) => (
+const MaterialContainer = ({ children, maxWidth }: IMaterialContainer) => (
   <>
     <CssBaseline />
-    <Container maxWidth="lg">{children}</Container>
+    <Container maxWidth={maxWidth ?? 'lg'}>{children}</Container>
   </>
 );
 
