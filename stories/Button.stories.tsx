@@ -2,7 +2,7 @@
 import { Meta, Story } from '@storybook/react';
 import React from 'react';
 
-import Button, { Props } from '../src/common/view/components/button/Button.tsx';
+import Button, { Props } from '../src/common/view/components/button/Button';
 
 export default {
   title: 'Cine-App/Button',
