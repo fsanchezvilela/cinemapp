@@ -1,5 +1,5 @@
 import React from 'react';
-import { customRender } from '../../../../../../test/test-utils';
+import { customRender } from '../../../../../../tests/test-utils';
 import Button from '../Button';
 
 describe('Button', () => {

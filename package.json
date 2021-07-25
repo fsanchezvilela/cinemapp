@@ -4,7 +4,7 @@
   "description": "CINEAPP/FRONT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fsanchezvilela/cinemapp.git"
+    "url": "git@github.com:fsanchezvilela/cinemapp.git"
   },
   "license": "MIT",
   "files": [
