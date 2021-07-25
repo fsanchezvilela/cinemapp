@@ -9,7 +9,8 @@ export const MoviesRepository = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'https://api.themoviedb.org/3/' }),
   endpoints: (builder) => ({
     getMoviesDiscovery: builder.query<IMoviesTransform, string>({
-      query: () => `discover/movie?api_key=82c05a745d0c6f1509cdc27e8d718342`,
+      query: () =>
+        `discover/movie?api_key=${process.env.NEXT_PUBLIC_WEBSITE_MOVIE_API}`,
       transformResponse: (response: IMoviesApiRest): IMoviesTransform => ({
         ...response,
         results: toMovieDomain(response.results),
