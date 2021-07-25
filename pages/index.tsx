@@ -16,8 +16,15 @@ const Home = () => {
           content={process.env.NEXT_PUBLIC_WEBSITE_DESCRIPTION}
         />
         <link rel="icon" href="/assets/icons/favicon/favicon.ico" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
       </Head>
-      <Button>Click me</Button>
       <Provider store={MoviesStore}>
         <MoviesContainer />
       </Provider>
