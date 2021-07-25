@@ -101,7 +101,7 @@ class Button extends React.Component<Props> {
     );
   }
 
-  handleKeypress = (e: React.KeyboardEvent) =>
+  handleKeypress = (e) =>
     e.charCode === 13 && this.props.onClick && this.props.onClick(e);
 }
 

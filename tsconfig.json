@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "target": "es5",
-    "paths": {
-      "*.ts": ["*"]
-    },
     "lib": ["dom", "dom.iterable", "esnext", "es6"],
-    "types": ["node"],
+    "types": [
+      "reflect-metadata",
+      "node",
+      "jest",
+      "jest-extended",
+      "jest-chain"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -22,6 +24,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["src", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "src/common/view/icons"]
 }

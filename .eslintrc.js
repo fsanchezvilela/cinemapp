@@ -22,7 +22,6 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'prettier',
-    'airbnb-base',
     'plugin:prettier/recommended',
     'plugin:sonarjs/recommended',
     'plugin:security/recommended',
@@ -70,9 +69,6 @@ module.exports = {
         'plugin:jsx-a11y/recommended', // Accessibility rules
       ],
       rules: {
-        // Bug for react was used before it was defined
-        'no-use-before-define': 'off',
-        '@typescript-eslint/no-use-before-define': ['error'],
         // Resets
         '@typescript-eslint/camelcase': 'off',
         // '@typescript-eslint/explicit-function-return-type': 'off',
