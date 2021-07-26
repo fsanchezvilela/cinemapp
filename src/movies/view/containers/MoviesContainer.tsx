@@ -34,7 +34,7 @@ const MoviesContainer = () => {
 
   return (
     <section className={style['movies-container']}>
-      <MaterialContainer maxWidth="md">
+      <MaterialContainer maxWidth="sm">
         {isLoading ? (
           <MaterialBox>
             <ClipLoader />
@@ -46,14 +46,19 @@ const MoviesContainer = () => {
                 preview
                 data={currentElement}
                 renderAction={
-                  <Button onClick={() => handleOnClick(currentElement)}>
+                  <Button
+                    color="default"
+                    onClick={() => handleOnClick(currentElement)}
+                  >
                     See More
                   </Button>
                 }
               />
             </MaterialBox>
             {movieStep < data.results.length && (
-              <Button onClick={handleNext}>Next Movie</Button>
+              <Button style={{ margin: '1rem auto' }} onClick={handleNext}>
+                Next Movie
+              </Button>
             )}
           </>
         )}

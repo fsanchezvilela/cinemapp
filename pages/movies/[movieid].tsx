@@ -32,7 +32,7 @@ const MovieDetail = () => {
 
   return (
     <section className={styles['movies-container']}>
-      <MaterialContainer>
+      <MaterialContainer maxWidth="md">
         <MaterialBox>
           <>
             <p>Post: {movieid}</p>

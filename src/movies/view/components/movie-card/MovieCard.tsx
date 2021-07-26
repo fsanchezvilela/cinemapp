@@ -20,10 +20,38 @@ const MovieCard = ({ data, preview = false, renderAction }: IMovieCard) => {
 
   return data ? (
     <div className={style['movie-card']}>
+      <div
+        style={{
+          backgroundImage: `url(https://image.tmdb.org/t/p/w185/${data.imgUrl})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: '100%',
+          backgroundPosition: 'center/center',
+          backgroundOrigin: 'border-box',
+          borderRadius: '1rem',
+          position: 'absolute',
+          zIndex: 1,
+        }}
+      />
       <h1>{data.title}</h1>
-      <img src={''} alt={`${data.imgUrl}`} />
-      {!preview && <p> {data.description}</p>}
-      <p>{`${data.voteAvg} ${data.voteCount}`}</p>
+      <figure>
+        <img
+          loading="lazy"
+          src={`https://image.tmdb.org/t/p/w185/${data.imgUrl}`}
+          alt={`${data.imgUrl}`}
+        />
+      </figure>
+
+      {!preview && (
+        <p className={style['movie-card__description']}>{data.description}</p>
+      )}
+      <div className={style['movie-card__rating']}>
+        <p
+          className={style['movie-card__score']}
+        >{`Rating: ${data.voteAvg} / 10`}</p>
+        <p
+          className={style['movie-card__total']}
+        >{`Total votes: ${data.voteCount}`}</p>
+      </div>
       {renderAction}
     </div>
   ) : (
