@@ -19,6 +19,22 @@ yarn install
 yarn dev
 ```
 
+#### Start Storybook Component Style Guide
+
+```bash
+yarn storybook
+```
+
+#### Run all Test
+```bash
+yarn test
+```
+
+### Run lint fix
+```bash
+yarn lint:fix
+```
+
 ## Hooks
 
 This monorepo use 2 git hooks (with [husky](https://github.com/typicode/husky))
