@@ -1,6 +1,6 @@
 import React from 'react';
-import MaterialBox from '../../../common/view/components/box/MaterialBox';
-import MaterialContainer from '../../../common/view/components/container/MaterialContainer';
+import MaterialBox from '../../../common/view/components/material-box/MaterialBox';
+import MaterialContainer from '../../../common/view/components/material-container/MaterialContainer';
 import { useGetMoviesDiscoveryQuery } from '../../data/repositories/MoviesRepository';
 import style from './MoviesContainer.module.scss';
 import { ClipLoader } from 'react-spinners';

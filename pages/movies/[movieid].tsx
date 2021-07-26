@@ -1,8 +1,8 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import MovieCard from '../../src/movies/view/components/movie-card/MovieCard';
-import MaterialBox from '../../src/common/view/components/box/MaterialBox';
-import MaterialContainer from '../../src/common/view/components/container/MaterialContainer';
+import MaterialBox from '../../src/common/view/components/material-box/MaterialBox';
+import MaterialContainer from '../../src/common/view/components/material-container/MaterialContainer';
 
 import { useRouter } from 'next/router';
 import { useGetMoviesDiscoveryQuery } from '../../src/movies/data/repositories/MoviesRepository';
