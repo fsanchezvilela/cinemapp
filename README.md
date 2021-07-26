@@ -106,6 +106,7 @@ _Single colon is used so *!* character is not confused by zsh as a modifier_
 - Import all Components in Storybook
 - Improve Reducers Functions (need more clean repository / state layer)
 - Add CI-CD in github pipelines / netlify
+- Add ErrorBoundary and Router Guardian for forbbiden routes (private/public)
 
 ## Authors
 By Fernando Sanchez
