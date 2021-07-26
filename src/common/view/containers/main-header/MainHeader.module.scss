@@ -1,0 +1,10 @@
+.main-header {
+  flex-grow: 1;
+  &__icon-button {
+    margin-right: 0.5rem;
+  }
+  &__title {
+    flex-grow: 1;
+    color: white;
+  }
+}

@@ -1,10 +1,8 @@
 import { MoviesRepository } from '../../../data/repositories/MoviesRepository';
-import { usersReducer, postsReducer, commentsReducer } from './functions';
+import { movieSlice } from './slice';
 
 const moviesReducer = {
   [MoviesRepository.reducerPath]: MoviesRepository.reducer,
-  usersReducer,
-  postsReducer,
-  commentsReducer,
+  movies: movieSlice,
 };
 export default moviesReducer;

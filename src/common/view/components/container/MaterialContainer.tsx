@@ -9,8 +9,9 @@ export interface IMaterialContainer {
 
 const MaterialContainer = ({ children, maxWidth }: IMaterialContainer) => (
   <>
-    <CssBaseline />
-    <Container maxWidth={maxWidth ?? 'lg'}>{children}</Container>
+    <CssBaseline>
+      <Container maxWidth={maxWidth ?? 'lg'}>{children}</Container>
+    </CssBaseline>
   </>
 );
 
