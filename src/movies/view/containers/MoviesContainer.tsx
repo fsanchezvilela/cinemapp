@@ -52,7 +52,9 @@ const MoviesContainer = () => {
                 }
               />
             </MaterialBox>
-            <Button onClick={handleNext}>Next Movie</Button>
+            {movieStep < data.results.length && (
+              <Button onClick={handleNext}>Next Movie</Button>
+            )}
           </>
         )}
       </MaterialContainer>
