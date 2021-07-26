@@ -7,7 +7,7 @@ describe('Button', () => {
     const rendered = customRender(<MaterialBox />);
     expect(rendered.container).toMatchSnapshot();
   });
-  it('Should show text button', () => {
+  it('Should show text children', () => {
     const rendered = customRender(<MaterialBox>mock test</MaterialBox>);
     expect(rendered.getByText('mock test')).not.toBeNil();
   });
