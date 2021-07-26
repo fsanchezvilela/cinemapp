@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MaterialBox Render 1`] = `
+<div>
+  <div
+    class="material-box"
+  />
+</div>
+`;

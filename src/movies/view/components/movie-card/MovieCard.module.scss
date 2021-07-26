@@ -1,0 +1,60 @@
+@import '../../../../common/view/styles/partials';
+.movie-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  &__description {
+    margin: 1rem 8rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+  }
+  h1 {
+    font-size: 2rem;
+    margin: 0 5rem;
+    margin-bottom: 1rem;
+    cursor: default;
+    z-index: 2;
+  }
+  figure {
+    width: 15rem;
+    height: 21rem;
+    z-index: 2;
+    border-radius: 1rem;
+    margin: 1rem;
+    box-shadow: $shadow-box-cards;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 1rem;
+      border: 1px solid rgba($color: #000000, $alpha: 0.3);
+    }
+  }
+  &__rating {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+  }
+  &__score,
+  &__total {
+    cursor: default;
+    transition: all 0.3s ease-in-out;
+    background-color: $neutral-light-gray-2;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    box-shadow: $shadow-buttons;
+    &:hover {
+      box-shadow: none;
+      background-color: $neutral-light-gray-3;
+    }
+  }
+  &__score {
+    margin-right: 3rem;
+  }
+}
