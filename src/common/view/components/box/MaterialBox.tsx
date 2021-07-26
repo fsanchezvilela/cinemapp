@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './MaterialBox.module.scss';
+
 export interface IMaterialBox {
   children?: React.ReactNode;
 }

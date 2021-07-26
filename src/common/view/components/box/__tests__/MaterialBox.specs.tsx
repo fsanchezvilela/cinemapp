@@ -2,7 +2,7 @@ import React from 'react';
 import { customRender } from '../../../../../../tests/test-utils';
 import MaterialBox from '../MaterialBox';
 
-describe('Button', () => {
+describe('MaterialBox', () => {
   it('Render', () => {
     const rendered = customRender(<MaterialBox />);
     expect(rendered.container).toMatchSnapshot();
